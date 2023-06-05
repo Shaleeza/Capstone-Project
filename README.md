@@ -1,13 +1,3 @@
 # Capstone-Project
-Capstone Writeup—Shaleeza Sohail
+Capstone—Shaleeza Sohail !!!!!! 
 Title: Animal Detection in Camera Trap Images-using background information
-Summary: The project provides a tool for farmers and people involved in smart farming for detecting animals in a series of camera trap images.
-Problem Statement Camera trap provides an easy to use and install system, that consists of a camera with a motion sensor and infrared flash suitable for sampling medium and large-sized birds and mammals with minimal disruption to animal behaviors. However, generally due to the quality of camera, time of capture and movement involved in images, animal detection is not an easy task. The images are captured in a set of three, hence, background detection provides an effective approach for improving image classification techniques used for this purpose.
-Project Background: Wellington Camera Trap Image dataset is used for this project to build an easy-to-use website for animal detection in camera trap images. This dataset contains 270,450 images, and 90,150 bursts from 187 camera locations in Wellington, New Zealand. The motion sensor cameras recorded a burst of three images when triggered and the images span from day to night and vary in terms of quality. Due to limited processing capability only 10,000 images are considered for this project where only presence of animal is detected to simplify the problem to binary classification problem. 
-Preprocessing: Images that are not in burst of three or are classified as “unclassifiable” in the data set are not considered. The size of images is reduced to 256 * 256. The image bursts are preprocessed by employing Gaussian Mixture-based Background/Foreground Segmentation (MOG2) and then adding that to construct a 4-channel image with the first image of the bursts.
-ML Model: CNN is used with Adam optimiser and learning rate of 0.001. Categorical cross-entropy loss function is used to account for class imbalance with a batch size of 30 and 5 epochs. The model achieved a testing accuracy of 0.8486. The accuracy is good as compared to the model built only considering single images. However, due to the small training dataset the accuracy is not very high, which can be improved based on the increase of training data. The model is saved as a .h5 file.
-Website: A simple website is created using flask and html on Digital Ocean platform. A simple file upload interface is created, where a camera trap image burst of size 3 can be uploaded and the model provides prediction for animal presence in the images burst.
-Deliverables: Ready to use website that provide animal prediction in camera trap images: HTTP server running at 170.64.165.6 and code on Github.
-
-
-
